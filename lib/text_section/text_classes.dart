@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
-class RegularText extends StatelessWidget {
-  final String _title;
-  final String _body;
+const double hpad = 10.0;
 
-  const RegularText(this._title, this._body, {Key? key}) : super(key: key);
+class TitleText extends StatelessWidget {
+  final String _title;
+
+  const TitleText(this._title, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,25 +13,31 @@ class RegularText extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Text(_title),
-        Text(_body),
+        Container(
+          padding: const EdgeInsets.fromLTRB(0, hpad, 0, hpad),
+          child: Text(_title),
+        )
       ],
     );
   }
 }
 
-class TitleText extends StatelessWidget {
-  final Color _color;
+class RegularText extends StatelessWidget {
+  final String _body;
 
-  TitleText(this._color);
+  const RegularText(this._body, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: _color,
-      ),
-      child: Text('hi'),
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        Container(
+          padding: const EdgeInsets.fromLTRB(0, hpad, 0, hpad),
+          child: Text(_body),
+        )
+      ],
     );
   }
 }

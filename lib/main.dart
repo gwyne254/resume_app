@@ -87,9 +87,12 @@ _portifolio() => Expanded(
               // Text('PORTIFOLIO'),
               // Text(
               // 'With great satisfaction, here are some my past projects for my clients'),
-              RegularText('PORTIFOLIO',
+              TitleText('PORTIFOLIO'),
+              RegularText(
                   'With great satisfaction, here are some my past projects for my clients'),
-              ImageBanner("assets/images/work-1.jpg")
+              ImageBanner("assets/images/work-1.jpg"),
+              RegularText('NAME'),
+              RegularText('Project type/Date'),
             ],
           ),
         ),
