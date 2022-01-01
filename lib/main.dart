@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:resume_app/style.dart';
 import 'package:resume_app/text_section/text_classes.dart';
 
 import 'image_section/image_classes.dart';
@@ -19,7 +20,8 @@ class MyApp extends StatelessWidget {
       title: 'Resume App',
       theme: ThemeData(
         // This is the theme of your application.
-
+        appBarTheme:
+            const AppBarTheme(textTheme: TextTheme(headline3: AppBarTextStyle)),
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
