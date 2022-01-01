@@ -4,6 +4,8 @@ void main() {
   runApp(const MyApp());
 }
 
+const darkBlueColor = Color(0xff536599);
+
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
@@ -43,6 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[200],
       appBar: AppBar(
           // Here we take the value from the MyHomePage object that was created by
           // the App.build method, and use it to set our appbar title.
@@ -64,9 +67,15 @@ class _MyHomePageState extends State<MyHomePage> {
           // children horizontally, and tries to be as tall as its parent.
 
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[],
+          children: <Widget>[_portifolio()],
         ),
       ),
     );
   }
 }
+
+_portifolio() => Container(
+      color: Colors.white,
+      padding: EdgeInsets.symmetric(vertical: 15, horizontal: 30),
+      child: Text('This is Portifolio'),
+    );
