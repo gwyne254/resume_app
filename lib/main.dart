@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:resume_app/text_section/text_classes.dart';
+
+import 'image_section/image_classes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -81,9 +84,12 @@ _portifolio() => Expanded(
           padding: const EdgeInsets.all(20.0),
           child: Column(
             children: const [
-              Text('PORTIFOLIO'),
-              Text(
+              // Text('PORTIFOLIO'),
+              // Text(
+              // 'With great satisfaction, here are some my past projects for my clients'),
+              RegularText('PORTIFOLIO',
                   'With great satisfaction, here are some my past projects for my clients'),
+              ImageBanner("assets/images/work-1.jpg")
             ],
           ),
         ),
