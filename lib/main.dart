@@ -52,10 +52,10 @@ class _MyHomePageState extends State<MyHomePage> {
           title: Text(widget.title),
           actions: <Widget>[
             Padding(
-                padding: EdgeInsets.only(right: 20.0),
+                padding: const EdgeInsets.only(right: 20.0),
                 child: GestureDetector(
                   onTap: () {},
-                  child: Icon(Icons.menu),
+                  child: const Icon(Icons.menu),
                 )),
           ]),
       body: Center(
@@ -66,7 +66,7 @@ class _MyHomePageState extends State<MyHomePage> {
           // arranges them vertically. By default, it sizes itself to fit its
           // children horizontally, and tries to be as tall as its parent.
 
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[_portifolio()],
         ),
       ),
@@ -74,8 +74,42 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-_portifolio() => Container(
+_portifolio() => Expanded(
+      child: Card(
+        margin: const EdgeInsets.fromLTRB(20, 30, 20, 20),
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Column(
+            children: const [
+              Text('PORTIFOLIO'),
+              Text(
+                  'With great satisfaction, here are some my past projects for my clients'),
+            ],
+          ),
+        ),
+      ),
+    );
+
+_serviceList() => Container(
       color: Colors.white,
-      padding: EdgeInsets.symmetric(vertical: 15, horizontal: 30),
-      child: Text('This is Portifolio'),
+      padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 30),
+      child: const Text('This is Services List'),
+    );
+
+_serviceDetail() => Container(
+      color: Colors.white,
+      padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 30),
+      child: const Text('This is Services Detail'),
+    );
+
+_contactForm() => Container(
+      color: Colors.white,
+      padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 30),
+      child: const Text('This is contact form'),
+    );
+
+_form() => Container(
+      color: Colors.white,
+      padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 30),
+      child: const Text('This is form'),
     );
